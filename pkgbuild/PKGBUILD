@@ -1,0 +1,32 @@
+# Maintainer: Barnabé di Kartola <barnabedikartola@gmail.com>
+
+pkgname=plasma5-applets-sink-audio
+pkgver=$(date +%y.%m.%d)
+pkgrel=$(date +%H%M)
+pkgdesc="Create/Remove Audio Sink"
+arch=('any')
+url="https://github.com/biglinux/$pkgname"
+license=('GPL3')
+# depends=('')
+provides=("$pkgname")
+# conflicts=('')
+source=("git+${url}.git")
+md5sums=('SKIP')
+
+package() {
+
+    InternalDir="${srcdir}/${pkgname}"
+
+    # Copy files
+    if [ -d "${InternalDir}/usr" ]; then
+        cp -r "${InternalDir}/usr" "${pkgdir}/"
+    fi
+
+    if [ -d "${InternalDir}/etc" ]; then
+        cp -r "${InternalDir}/etc" "${pkgdir}/"
+    fi
+
+    if [ -d "${InternalDir}/opt" ]; then
+        cp -r "${InternalDir}/opt" "${pkgdir}/"
+    fi
+}

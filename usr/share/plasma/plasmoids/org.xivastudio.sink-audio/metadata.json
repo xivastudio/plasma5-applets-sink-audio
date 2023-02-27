@@ -1,0 +1,27 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "barnabedikartola@gmail.com",
+                "Name": "Barnabe di Kartola"
+            }
+        ],
+        "Category": "System",
+        "Description": "Sink Audio",
+        "Description[pt_BR]": "Criar/Remover Sink Audio",
+        "EnabledByDefault": true,
+        "Icon": "xpto",
+        "Id": "org.xivastudio.sink-audio",
+        "License": "GPL-2.0+",
+        "Name": "Sink Audio",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "1.0",
+        "Website": "https://kde.org/plasma-desktop"
+    },
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-NotificationArea": "true",
+    "X-Plasma-NotificationAreaCategory": "SystemServices"
+}

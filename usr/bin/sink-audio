@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -e "$HOME/.config/sink-audio" ]; then
+    rm -f "$HOME/.config/sink-audio"
+    pactl unload-module module-null-sink
+else
+    echo true > "$HOME/.config/sink-audio"
+    pactl load-module module-null-sink media.class=Audio/Sink sink_name=my-effect-sink channel_map=stereo
+fi
